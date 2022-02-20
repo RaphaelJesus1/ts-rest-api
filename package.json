@@ -1,0 +1,22 @@
+{
+  "name": "wings-airline",
+  "version": "1.0.0",
+  "description": "ticket saling API for an airline company",
+  "main": "build/app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/app.js"
+  },
+  "keywords": [
+    "crud",
+    "api",
+    "database",
+    "mysql",
+    "airline"
+  ],
+  "author": "Raphael Menezes de Jesus",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
