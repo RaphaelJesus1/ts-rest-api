@@ -1,9 +1,13 @@
+import { Flight } from ".";
+
 export interface NewSeat {
-  name: string;
+  identifier: string;
 }
 
 export interface Seat extends NewSeat {
   id: number;
+  flightId?: Flight["id"];
+  available?: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -11,7 +15,9 @@ export interface Seat extends NewSeat {
 export const parseSeat = (res: any): Seat => {
   return {
     id: res.seat_id,
-    name: res.name,
+    identifier: res.identifier,
+    flightId: res.flight_id,
+    available: res.available,
     createdAt: res.created_at,
     updatedAt: res.updated_at,
   };
