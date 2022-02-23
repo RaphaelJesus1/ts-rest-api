@@ -4,6 +4,7 @@ export interface NewTicket {
   flightId: Flight["id"];
   clientId: Client["id"];
   seatId: Seat["id"];
+  identifier: string;
   purchaseDate?: Date;
 }
 
@@ -20,6 +21,7 @@ export const parseTicket = (res: any): Ticket => {
     flightId: res.flight_id,
     clientId: res.client_id,
     seatId: res.seat_id,
+    identifier: res.identifier,
     purchaseDate: res.purchaseDate,
     createdAt: res.created_at,
     updatedAt: res.updated_at,
